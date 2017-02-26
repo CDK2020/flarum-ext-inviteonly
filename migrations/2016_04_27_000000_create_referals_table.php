@@ -9,8 +9,6 @@ return Migration::createTable(
         $table->integer('referrer')->unsigned();
         $table->string('token');
         $table->timestamp('created_at');
-        $table->boolean('used');
-        $table->integer('used_by');
-        $table->timestamp('used_at')->nullable();
+        $table->integer('used');
     }
 );

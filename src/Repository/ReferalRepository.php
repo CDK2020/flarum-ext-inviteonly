@@ -22,9 +22,9 @@ class ReferalRepository
     public function useCode($token, $actorId)
     {
         $referal = $this->findOrFail($token);
-        $useNum = $referal->used
-        $amtNum = $useNum + 1;
-        $referal->used = $amtNum;
+        $useNum = $referal->used;
+        $useNum++;
+        $referal->used = $useNum;
         $referal->save();
         return $ref;
     }

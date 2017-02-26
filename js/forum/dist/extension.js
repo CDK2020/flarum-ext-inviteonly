@@ -171,8 +171,6 @@ System.register('Davis/InviteOnly/main', ['flarum/extend', 'flarum/app', 'flarum
             _this2.flatcodes[index]['index'] = index;
             _this2.flatcodes[index]['id'] = response.data.attributes['id'];
             _this2.flatcodes[index]['token'] = response.data.attributes['token'];
-            _this2.flatcodes[index]['used'] = response.data.attributes['used'];
-            _this2.flatcodes[index]['used_by'] = response.data.attributes['used_by'];
             m.redraw();
             _this2.loading = false;
             _this2.handleErrors(response);

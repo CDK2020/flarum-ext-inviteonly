@@ -28,7 +28,7 @@ class ReferalRepository
         $referal->save();
         return $ref;
     }
-    public function createCode($id, $actorId $actorName) 
+    public function createCode($id, $actorId, $actorName) 
     {
         $referal = new Referal;
         $referal->referrer = $actorId;

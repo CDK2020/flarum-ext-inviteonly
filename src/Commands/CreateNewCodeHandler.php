@@ -36,10 +36,7 @@ class CreateNewCodeHandler
             } else {
                 die('You can only have '.$max.' keys');
             }
-        } else {
-            $referal = $this->referal->editCode($command->refid, $command->actor->id);
-        }
-
+            
         return $referal;
     }
 }

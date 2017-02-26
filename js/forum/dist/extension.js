@@ -134,6 +134,7 @@ System.register('Davis/InviteOnly/main', ['flarum/extend', 'flarum/app', 'flarum
                 _this.flatcodes[k]['index'] = k;
                 _this.flatcodes[k]['id'] = _this.codes[k]['id'];
                 _this.flatcodes[k]['token'] = _this.codes[k]['token'];
+                _this.flatcodes[k]['used'] = _this.codes[k]['used'];
               }
               m.redraw();
               _this.loading = false;
@@ -167,6 +168,7 @@ System.register('Davis/InviteOnly/main', ['flarum/extend', 'flarum/app', 'flarum
             _this2.flatcodes[index]['index'] = index;
             _this2.flatcodes[index]['id'] = response.data.attributes['id'];
             _this2.flatcodes[index]['token'] = response.data.attributes['token'];
+            _this2.flatcodes[index]['used'] = response.data.attributes['used'];
             m.redraw();
             _this2.loading = false;
             _this2.handleErrors(response);

@@ -16,8 +16,6 @@ class GetUserCodesSerializer extends AbstractSerializer
                 'created_at'   => $referals[$i]->created_at,
                 'token'     => $referals[$i]->token,
                 'used'      => $referals[$i]->used,
-                'used_by'   => $referals[$i]->used_by,
-                'used_at'   => $referals[$i]->used_at
             ];
         }
         return $attributes;

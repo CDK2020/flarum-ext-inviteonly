@@ -22,9 +22,9 @@ class ReferalRepository
     public function useCode($token, $actorId)
     {
         $referal = $this->findOrFail($token);
-        $referal->used = 1;
-        $referal->used_at = date( 'Y-m-d H:i:s');
-        $referal->used_by = $actorId;
+        $useNum = $referal->used
+        $useNum++;
+        $referal->used = $useNum;
         $referal->save();
         return $ref;
     }
@@ -32,31 +32,12 @@ class ReferalRepository
     {
         $referal = new Referal;
         $referal->referrer = $actorId;
-        $referal->token = str_random(14);
+        $referal->token = $actorId;
         if (Referal::where('token', $referal->token)->exists()) {
-            $referal->token = str_random(14);
+            $referal->token = $actorId;
         }
         $referal->created_at = date( 'Y-m-d H:i:s');
         $referal->used = 0;
-        $referal->used_by = 0;
-        $referal->used_at = null;
-
-        $referal->save();
-
-        return $referal;
-    }
-    public function editCode($id, $actorId) 
-    {
-        $referal = Referal::where('id', $id)->firstOrFail();
-        $referal->referrer = $actorId;
-        $referal->token = str_random(14);
-        if (Referal::where('token', $referal->token)->exists()) {
-            $referal->token = str_random(14);
-        }
-        $referal->created_at = date( 'Y-m-d H:i:s');
-        $referal->used = 0;
-        $referal->used_by = 0;
-        $referal->used_at = null;
 
         $referal->save();
 

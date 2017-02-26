@@ -1,6 +1,6 @@
 {
-    "name": "davis/flarum-ext-inviteonly",
-    "description": "Allow Registration only if invited.",
+    "name": "issyrocks12/flarum-ext-refer",
+    "description": "Refer people to your website",
     "keywords": ["invite", "flarum", "davis", "customization", "private"],
     "type": "flarum-extension",
     "license": "MIT",
@@ -8,25 +8,29 @@
         {
             "name": "Connor Davis",
             "email": "davis@produes.co"
+        },
+        {
+            "name": "Charlie K",
+            "email": "charlie@jailbreakhub.org"
         }
     ],
     "support": {
-        "issues": "https://github.com/dav-is/flarum-ext-inviteonly/issues",
-        "source": "https://github.com/dav-is/flarum-ext-inviteonly"
+        "issues": "https://github.com/issyrocks12/flarum-ext-refer/issues",
+        "source": "https://github.com/issyrocks12/flarum-ext-refer"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.5"
+        "flarum/core": "^0.1.0-beta.1"
     },
     "autoload": {
         "psr-4": {
-            "Davis\\InviteOnly\\": "src/"
+            "issyrocks12\\refer\\": "src/"
         }
     },
     "extra": {
         "flarum-extension": {
-            "title": "Invite Only",
+            "title": "Refer",
             "icon": {
-                "name": "exchange",
+                "name": "user",
                 "backgroundColor": "#2980b9",
                 "color": "white"
             }

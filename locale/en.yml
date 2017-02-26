@@ -8,7 +8,7 @@ davis-inviteonly:
     edit:
       title: Your Sign Up Keys
       key: Key
-      used: Uses
+      used: Times Used
       used_by: Used By
       expire: Valid for
     sign_up:

@@ -14,8 +14,6 @@ class CreateNewCodeSerializer extends AbstractSerializer
             'created_at'    => $referals->created_at,
             'token'         => $referals->token,
             'used'          => $referals->used,
-            'used_by'       => $referals->used_by,
-            'used_at'       => $referals->used_at
         ];
     }
 }

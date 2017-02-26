@@ -144,7 +144,7 @@ System.register('Davis/InviteOnly/main', ['flarum/extend', 'flarum/app', 'flarum
           items.add('invite', FieldSet.component({
             label: app.translator.trans('davis-inviteonly.forum.edit.title'),
             className: 'Settings-invite',
-            children: [m('table', { className: "NotificationGrid" }, [m('thead', [m('tr', [m('td', [app.translator.trans('davis-inviteonly.forum.edit.key')]), m('td', [app.translator.trans('davis-inviteonly.forum.edit.used')]), m('td')])]), m('tbody', [this.flatcodes !== undefined ? this.flatcodes.map(function (code) {
+            children: [m('table', { className: "NotificationGrid" }, [m('thead', [m('tr', [m('td', [app.translator.trans('davis-inviteonly.forum.edit.key')]), m('td', "Times Used"), m('td')])]), m('tbody', [this.flatcodes !== undefined ? this.flatcodes.map(function (code) {
               return [m('tr', [m('td', [code['token']]), m('td', [code['used']])])];
             }) : m('tr', [m('td', [app.translator.trans('davis-inviteonly.forum.loading')])]), m('tr', [m('td', { colspan: 4 }, [Button.component({ className: "Button Button--primary Button--block", onclick: function onclick() {
                 _this.createToken(0, _this.flatcodes.length);

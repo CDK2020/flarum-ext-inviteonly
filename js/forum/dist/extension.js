@@ -148,7 +148,7 @@ System.register('Davis/InviteOnly/main', ['flarum/extend', 'flarum/app', 'flarum
               return [m('tr', [m('td', [code['token']]), m('td', [code['used']])])];
             }) : m('tr', [m('td', [app.translator.trans('davis-inviteonly.forum.loading')])]), m('tr', [m('td', { colspan: 4 }, [Button.component({ className: "Button Button--primary Button--block", onclick: function onclick() {
                 _this.createToken(0, _this.flatcodes.length);
-              } }, ["Create New Code"])])])])])]
+              } }, ["Get a Code"])])])])])]
           }), 1);
         });
         SettingsPage.prototype.createToken = function (id, index) {

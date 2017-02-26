@@ -65,9 +65,6 @@ class RegisterUserHandler
         
         //Ensure Referal Code is in DB
         $referalsfind = $this->referal->findOrFail($referal);
-        if ($referalsfind['attributes']['used']) {
-            die('CODE IS USED!');
-        }
         
         // If a valid authentication token was provided as an attribute,
         // then we won't require the user to choose a password.

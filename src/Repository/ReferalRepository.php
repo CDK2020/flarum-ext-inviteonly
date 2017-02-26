@@ -23,8 +23,8 @@ class ReferalRepository
     {
         $referal = $this->findOrFail($token);
         $useNum = $referal->used
-        $useNum++;
-        $referal->used = $useNum;
+        $amtNum = $useNum + 1;
+        $referal->used = $amtNum;
         $referal->save();
         return $ref;
     }

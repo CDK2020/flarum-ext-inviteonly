@@ -68,11 +68,6 @@ class RegisterUserHandler
         
         // If a valid authentication token was provided as an attribute,
         // then we won't require the user to choose a password.
-        if (isset($data['attributes']['token'])) {
-            $token = AuthToken::validOrFail($data['attributes']['token']);
-
-            $password = $password ?: str_random(20);
-        }
 
         $user = User::register($username, $email, $password);
         
@@ -88,9 +83,6 @@ class RegisterUserHandler
             if (isset($token->payload['email'])) {
                 $user->activate();
             }
-        }
-        if ($actor->isAdmin() && array_get($data, 'attributes.isActivated')) {
-            $user->activate();
         }
         
         $this->events->fire(

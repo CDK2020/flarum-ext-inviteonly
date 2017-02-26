@@ -6,7 +6,7 @@ davis-inviteonly:
   forum:
     loading: "Loading..."
     edit:
-      title: Your Sign Up Keys
+      title: Your Referral code
       key: Key
       used: Times Used
       used_by: Used By

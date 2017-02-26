@@ -32,9 +32,9 @@ class CreateNewCodeHandler
                 $max = 5;
             }
             if ($this->referal->countCodes($command->actor->id) < $max) {
-                $referal = $this->referal->createCode($command->refid, $command->actor->id);
+                $referal = $this->referal->createCode($command->refid, $command->actor->username);
             } else {
-                return
+                die('You can only have '.$max.' keys');
             }
         } else {
             $referal = $this->referal->editCode($command->refid, $command->actor->id);

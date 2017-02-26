@@ -28,11 +28,11 @@ class ReferalRepository
         $referal->save();
         return $ref;
     }
-    public function createCode($id, $actorId) 
+    public function createCode($id, $actorId $actorName) 
     {
         $referal = new Referal;
         $referal->referrer = $actorId;
-        $referal->token = $actornName;
+        $referal->token = $actorName;
         if (Referal::where('token', $referal->token)->exists()) {
             $referal->token = $actorName;
         }

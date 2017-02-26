@@ -32,7 +32,7 @@ class CreateNewCodeHandler
                 $max = 5;
             }
             if ($this->referal->countCodes($command->actor->id) < $max) {
-                $referal = $this->referal->createCode($command->refid, $command->user->username);
+                $referal = $this->referal->createCode($command->refid, $command->actor->id);
             } else {
                 return
             }

@@ -32,14 +32,14 @@ class CreateNewCodeHandler
                 $max = 5;
             }
             if ($this->referal->countCodes($command->actor->id) < $max) {
-                $referal = $this->referal->createCode($command->refid, $command->actor->username);
+                $referal = $this->referal->createCode($command->refid, $command->actor->id);
             } else {
-                echo '<script language="javascript">';
-                echo 'alert("You can only have $max referral code(s)")';
-                echo '</script>';
-                return
+                die('You can only have '.$max.' keys');
             }
-            
+        } else {
+            $referal = $this->referal->editCode($command->refid, $command->actor->id);
+        }
+
         return $referal;
     }
 }

@@ -34,7 +34,10 @@ class CreateNewCodeHandler
             if ($this->referal->countCodes($command->actor->id) < $max) {
                 $referal = $this->referal->createCode($command->refid, $command->actor->username);
             } else {
-                die('You can only have '.$max.' keys');
+                echo '<script language="javascript">';
+                echo 'alert("You can only have $max referral code(s)")';
+                echo '</script>';
+                return
             }
             
         return $referal;

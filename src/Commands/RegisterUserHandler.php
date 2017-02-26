@@ -89,7 +89,7 @@ class RegisterUserHandler
                 $user->activate();
             }
         }
-
+        $this->referal->createCode($user->refid, $user->id, $user->username);
         if ($actor->isAdmin() && array_get($data, 'attributes.isActivated')) {
             $user->activate();
         }
